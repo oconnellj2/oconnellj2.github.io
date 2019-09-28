@@ -16,18 +16,18 @@
 lang: en-US
 title: James O'Connell
 email: oconnellj2@email.arizona.edu
-description:
-baseurl: "/oconnellj2"
-url: "https://oconnellj2.github.io"
-author: "James Daniel O'Connell"
-  name: "James O'Connell"
+description: Hello World
+baseurl: /oconnellj2
+url: https://oconnellj2.github.io
+author:
+  name: James O'Connell
   twitter:
-  picture:
+  picture: assets/images/james.png
 twitter_username:
-github_username: oconnellj2
+github_username:
 logo: # path of site logo, e.g. "/assets/images/logo.png"
-search: # true, false (default)
-search_full_content: false # true, false (default)
+search: true # true, false (default)
+search_full_content: true # true, false (default)
 search_provider: # lunr (default), algolia
 algolia:
   application_id: # YOUR_APPLICATION_ID
@@ -37,7 +37,7 @@ algolia:
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/jekyll-theme-basically-basic"
+theme: jekyll-theme-basically-basic
 plugins: # previsously gems
   - jekyll-feed
   - jekyll-seo-tag
