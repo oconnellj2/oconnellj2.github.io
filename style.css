@@ -1,0 +1,36 @@
+body {
+    font-family : "Menlo", monospace;
+    background-color: #282c34;
+    color: #60aceb;
+    
+  }
+h1 {
+    font-family : "Menlo", monospace;
+    font-weight: normal;
+    color: #9aa1ae;
+}
+p {
+    color: #9aa1ae;
+}
+
+a:link {
+    color: #9aa1ae;
+    font-family : "Menlo", monospace;
+    text-decoration: none;
+    
+    }
+a:visited {
+    color: #9aa1ae;
+    font-family : "Menlo", monospace;
+    }
+a:hover {
+    color: #60aceb;
+    font-family : "Menlo", monospace;
+    }
+
+#wrap {
+    float: left;;
+    position: relative;
+    left: 200px;
+    top: 100px;
+}
