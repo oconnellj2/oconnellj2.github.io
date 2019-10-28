@@ -26,11 +26,11 @@ a:visited {
 a:hover {
     color: #60aceb;
     font-family : "Menlo", monospace;
+    transition: all 0.5 ease;
     }
 
-#wrap {
-    float: left;;
-    position: relative;
+#position {
+    position: absolute;
     left: 200px;
-    top: 100px;
+    top: 70px;
 }
