@@ -1,22 +1,30 @@
 body {
     font-family : "Menlo", monospace;
     background-color: #282c34;
-    color: #60aceb;
-    
+    color: #60aceb; 
+    font-size: 12pt;
   }
 h1 {
     font-family : "Menlo", monospace;
     font-weight: normal;
+    font-size: 30pt;
     color: #9aa1ae;
+}
+h3 {
+    font-family : "Menlo", monospace;
+    font-weight: normal;
+    font-size: 18pt;
 }
 p {
     color: #9aa1ae;
+    font-size: 12pt;
 }
 
 a:link {
     color: #9aa1ae;
     font-family : "Menlo", monospace;
     text-decoration: none;
+    font-size: 12pt;
     
     }
 a:visited {
@@ -26,11 +34,12 @@ a:visited {
 a:hover {
     color: #60aceb;
     font-family : "Menlo", monospace;
-    transition: all 0.5 ease;
+    transition: all 500ms ease;
+    animation: reverse;
     }
 
 #position {
     position: absolute;
-    left: 200px;
+    left: 150px;
     top: 70px;
 }
