@@ -14,9 +14,6 @@
 	background-color: var(--mantine-color-body);
 	border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
-.textHeader {
-	text-transform: uppercase;
-}
 .innerHeader {
 	height: rem(56px);
 	display: flex;
@@ -37,4 +34,9 @@
 a {
 	color: #2997ff;
 	text-decoration: none;
+}
+pre {
+	border: 1px solid #2997ff;
+	border-radius: 10px;
+	padding: 5px;
 }

@@ -1,39 +1,40 @@
 env:
-    browser: true
-    es2021: true
+  browser: true
+  node: true
+  es2021: true
 extends:
-    - eslint:recommended
-    - plugin:react/recommended
-    - prettier
+  - eslint:recommended
+  - plugin:react/recommended
+  - prettier
 parserOptions:
-    ecmaVersion: latest
-    sourceType: module
+  ecmaVersion: latest
+  sourceType: module
 settings:
-    react:
-        version: detect
+  react:
+    version: detect
 plugins:
-    - react
-    - import
+  - react
+  - import
 ignorePatterns: ['build/']
 rules:
-    indent:
-        - error
-        - tab
-    linebreak-style:
-        - error
-        - unix
-    quotes:
-        - error
-        - single
-    semi:
-        - error
-        - always
-    import/order:
-        - 1
-        - newlines-between: always
-          groups: [builtin, external, internal, [parent, sibling]]
-          pathGroups: [{pattern: react, group: external, position: before}]
-          pathGroupsExcludedImportTypes: [react]
-          alphabetize:
-              order: asc
-              caseInsensitive: true
+  indent:
+    - error
+    - tab
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  import/order:
+    - 1
+    - newlines-between: always
+      groups: [builtin, external, internal, [parent, sibling]]
+      pathGroups: [{pattern: react, group: external, position: before}]
+      pathGroupsExcludedImportTypes: [react]
+      alphabetize:
+        order: asc
+        caseInsensitive: true

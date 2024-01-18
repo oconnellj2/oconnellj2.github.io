@@ -9,7 +9,7 @@ import App from './App';
 const theme = createTheme({
 	fontFamily: 'pill-gothic, sans-serif',
 	headings: {fontFamily: 'pill-gothic-header, sans-serif'},
-	colors: {dark: ['', '', '', '', '', '', '', '#000000']},
+	colors: {dark: ['', '', '', '', '', '', '', '#000000']}
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		<MantineProvider theme={theme}>
 			<App />
 		</MantineProvider>
-	</React.StrictMode>,
+	</React.StrictMode>
 );

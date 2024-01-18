@@ -9,9 +9,10 @@ import {
 	Title,
 	rem,
 	useMantineColorScheme,
-	useComputedColorScheme
+	useComputedColorScheme,
+	HoverCard
 } from '@mantine/core';
-import {IconCode, IconSun, IconMoon} from '@tabler/icons-react';
+import {IconCode, IconSun, IconBrandLinkedin, IconBrandGithub, IconFileText, IconMoonStars} from '@tabler/icons-react';
 import PropTypes from 'prop-types';
 import Typist from 'react-typist-component';
 
@@ -27,18 +28,59 @@ const PageTemplate = ({children}) => {
 			<header className={style.header}>
 				<Container my="md" className={style.innerHeader}>
 					<Typist>
-						<Title className={style.textHeader} order={1}>
+						<Title tt="uppercase">
 							hello world
 						</Title>
 					</Typist>
-					<ActionIcon
-						onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-						variant="subtle"
-						color="gray"
-						aria-label="toggle-color"
-					>
-						{computedColorScheme === 'light' ? <IconMoon /> : <IconSun />}
-					</ActionIcon>
+					<Group gap={5} wrap="nowrap">
+						<HoverCard closeDelay={0}>
+							<HoverCard.Target>
+								<ActionIcon
+									component="a"
+									href={require('../assets/resume.pdf')}
+									rel="noopener noreferrer nofollow"
+									target="_blank"
+									color="gray"
+									variant="subtle"
+								>
+									<IconFileText stroke={1.5} />
+								</ActionIcon>
+							</HoverCard.Target>
+							<HoverCard.Dropdown>
+								<Text c="dimmed" size="xs">
+									résumé
+								</Text>
+							</HoverCard.Dropdown>
+						</HoverCard>
+						<ActionIcon
+							component="a"
+							href="https://github.com/oconnellj2"
+							rel="noopener noreferrer nofollow"
+							target="_blank"
+							color="gray"
+							variant="subtle"
+						>
+							<IconBrandGithub stroke={1.5} />
+						</ActionIcon>
+						<ActionIcon
+							component="a"
+							href="https://www.linkedin.com/in/oconnellj2"
+							rel="noopener noreferrer nofollow"
+							target="_blank"
+							color="gray"
+							variant="subtle"
+						>
+							<IconBrandLinkedin stroke={1.5} />
+						</ActionIcon>
+						<ActionIcon
+							onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
+							variant="subtle"
+							color={computedColorScheme === 'light' ? 'dark' : 'orange'}
+							aria-label="toggle-color"
+						>
+							{computedColorScheme === 'light' ? <IconMoonStars stroke={1.5} /> : <IconSun stroke={1.5} />}
+						</ActionIcon>
+					</Group>
 				</Container>
 				<Space h="xl" />
 			</header>
