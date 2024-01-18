@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/arrakis/static/js/main.105a21f3.js",
+    "index.html": "/arrakis/index.html",
+    "main.105a21f3.js.map": "/arrakis/static/js/main.105a21f3.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.105a21f3.js"
+  ]
+}
