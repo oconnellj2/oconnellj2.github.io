@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'pill-gothic';
+	src: url('../fonts/pill-gothic-600mg-regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'pill-gothic-header';
+	src: url('../fonts/pill-gothic-600mg-bold.ttf') format('truetype');
+}
+
+.header {
+	height: rem(56px);
+	margin-bottom: rem(120px);
+	background-color: var(--mantine-color-body);
+	border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+.textHeader {
+	text-transform: uppercase;
+}
+.innerHeader {
+	height: rem(56px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer {
+	margin-top: rem(120px);
+	border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+.innerFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: var(--mantine-spacing-xl);
+	padding-bottom: var(--mantine-spacing-xl);
+}
+a {
+	color: #2997ff;
+	text-decoration: none;
+}
