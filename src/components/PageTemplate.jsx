@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
 	ActionIcon,
@@ -20,6 +20,29 @@ import Typist from 'react-typist-component';
 import style from '../css/PageTemplate.module.css';
 
 const PageTemplate = ({children}) => {
+	const languages = [
+		'Hello',
+		'Bonjour',
+		'Hola',
+		'안녕하세요',
+		'こんにちは',
+		'Вітаю',
+		'Привет',
+		'Cześć',
+		'שלום',
+		'مرحبا'
+	];
+	const [greeting, setGreeting] = useState('');
+
+	useEffect(() => {
+		const getRandomGreeting = () => languages[Math.floor(Math.random() * languages.length)];
+		setGreeting(getRandomGreeting());
+		const intervalId = setInterval(() => {
+			setGreeting(getRandomGreeting());
+		}, 5000);
+		return () => clearInterval(intervalId);
+	}, []);
+
 	const {setColorScheme} = useMantineColorScheme();
 	const computedColorScheme = useComputedColorScheme('dark', {
 		getInitialValueInEffect: true
@@ -29,11 +52,9 @@ const PageTemplate = ({children}) => {
 			<header className={style.header}>
 				<Container my="md" className={style.innerHeader}>
 					<Link className={style.page} to="/">
-						<Typist>
-							<Title tt="uppercase">a website</Title>
-						</Typist>
+						{greeting && <Typist><Title>{greeting}</Title></Typist>}
 					</Link>
-					<Group grow gap={5} wrap="nowrap">
+					<Group gap={5} wrap="nowrap">
 						<Link className={style.page} to="arrakis">
 							<ActionIcon href="https://github.com/oconnellj2/oconnellj2.github.io" color="gray" variant="transparent">
 								Arrakis
