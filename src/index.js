@@ -1,8 +1,8 @@
 import React from 'react';
 
+import '@mantine/core/styles.css';
 import {MantineProvider, createTheme} from '@mantine/core';
 import ReactDOM from 'react-dom/client';
-import '@mantine/core/styles.css';
 
 import App from './App';
 
