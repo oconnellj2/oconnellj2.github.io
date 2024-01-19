@@ -9,21 +9,17 @@
 }
 
 .header {
-	height: rem(56px);
-	margin-bottom: rem(120px);
-	background-color: var(--mantine-color-body);
-	border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-}
-.innerHeader {
-	height: rem(56px);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 .page {
-	padding-right: 30px;
+	padding-right: 10px;
 	color: unset;
+	display: flex;
+	align-items: center;
 }
+
 .footer {
 	margin-top: rem(120px);
 	border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));

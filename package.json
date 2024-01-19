@@ -35,9 +35,13 @@
     ]
   },
   "dependencies": {
+    "@mantine/charts": "^7.4.2",
     "@mantine/core": "^7.4.2",
     "@tabler/icons-react": "^2.46.0",
+    "axios": "^1.6.5",
+    "chart.js": "^4.4.1",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",

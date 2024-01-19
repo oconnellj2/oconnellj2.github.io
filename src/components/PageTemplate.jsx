@@ -12,7 +12,15 @@ import {
 	useComputedColorScheme,
 	HoverCard
 } from '@mantine/core';
-import {IconCode, IconSun, IconBrandLinkedin, IconBrandGithub, IconFileText, IconMoonStars} from '@tabler/icons-react';
+import {
+	IconCode,
+	IconSun,
+	IconBrandLinkedin,
+	IconBrandGithub,
+	IconFileText,
+	IconMoonStars,
+	IconSatellite
+} from '@tabler/icons-react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import Typist from 'react-typist-component';
@@ -21,44 +29,50 @@ import style from '../css/PageTemplate.module.css';
 
 const PageTemplate = ({children}) => {
 	const languages = [
-		'Hello',
-		'Bonjour',
-		'Hola',
-		'안녕하세요',
-		'こんにちは',
-		'Вітаю',
-		'Привет',
-		'Cześć',
-		'שלום',
-		'مرحبا'
+		'Welcome',
+		'Bienvenu',
+		'स्वागतम्',
+		'환영합니다',
+		'ようこそ',
+		'Ласкаво просимо',
+		'Powitać',
+		'Willkómmen',
+		'ברוך הבא'
 	];
-	const [greeting, setGreeting] = useState('');
+	const [count, setCount] = useState(1);
+	const [index, setIndex] = useState(0);
+	const [greeting, setGreeting] = useState(languages[0]);
 
 	useEffect(() => {
-		const getRandomGreeting = () => languages[Math.floor(Math.random() * languages.length)];
-		setGreeting(getRandomGreeting());
-		const intervalId = setInterval(() => {
-			setGreeting(getRandomGreeting());
-		}, 5000);
-		return () => clearInterval(intervalId);
-	}, []);
+		setCount(1);
+		const nextIndex = (index + 1) % languages.length;
+		setGreeting(languages[nextIndex]);
+		setIndex(nextIndex);
+	}, [count]);
 
 	const {setColorScheme} = useMantineColorScheme();
-	const computedColorScheme = useComputedColorScheme('dark', {
-		getInitialValueInEffect: true
-	});
+	const computedColorScheme = useComputedColorScheme('dark', {getInitialValueInEffect: true});
+
 	return (
 		<>
-			<header className={style.header}>
-				<Container my="md" className={style.innerHeader}>
+			<header>
+				<Container my="xl" className={style.header}>
 					<Link className={style.page} to="/">
-						{greeting && <Typist><Title>{greeting}</Title></Typist>}
+						<Title tt="uppercase">_ </Title>
+						{count && (
+							<Typist style={{width: '300px'}} avgTypingDelay={50} onTypingDone={() => setCount(0)}>
+								<Title tt="uppercase">{greeting}</Title>
+								<Typist.Delay ms={5000} />
+								<Typist.Backspace count={greeting.length} />
+							</Typist>
+						)}
 					</Link>
-					<Group gap={5} wrap="nowrap">
+					<Group gap={2} wrap="nowrap">
 						<Link className={style.page} to="arrakis">
-							<ActionIcon href="https://github.com/oconnellj2/oconnellj2.github.io" color="gray" variant="transparent">
-								Arrakis
-							</ActionIcon>
+							<Text style={{marginRight: 1}} href="https://github.com/oconnellj2/oconnellj2.github.io">
+								ARRAKIS
+							</Text>
+							<IconSatellite stroke={1} />
 						</Link>
 						<HoverCard>
 							<HoverCard.Target>
