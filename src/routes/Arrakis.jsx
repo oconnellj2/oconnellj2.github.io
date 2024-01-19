@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import {NativeSelect, Title} from '@mantine/core';
+import {NativeSelect, Text, Title} from '@mantine/core';
 import axios from 'axios';
 
 import TelemetryChart from '../components/TelemetryChart';
@@ -18,15 +18,14 @@ const Arrakis = () => {
 	return (
 		<>
 			<Title order={2} tt="uppercase">
-				Arrakis - Spacex Telemetry Client
+				Arrakis - Spacex Mission Telemetry Client
 			</Title>
-			<p>
-				A client for{' '}
+			<Text fs="italic">
+				See: {' '}
 				<a href="https://r4ygm.github.io/SpaceXTelemetry-Api/" rel="noopener noreferrer nofollow" target="_blank">
 					SpaceXTelemetry-Api
 				</a>
-				.
-			</p>
+			</Text>
 			<NativeSelect
 				label="MISSION"
 				size='lg'
