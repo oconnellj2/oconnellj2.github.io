@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.23816cf3.css",
-    "main.js": "/static/js/main.649f7db8.js",
+    "main.css": "/static/css/main.186276a0.css",
+    "main.js": "/static/js/main.6e76b132.js",
     "static/media/resume.pdf": "/static/media/resume.a501bcdd459d50531028.pdf",
     "static/media/pill-gothic-600mg-regular.ttf": "/static/media/pill-gothic-600mg-regular.726af025a1d878200f57.ttf",
     "static/media/pill-gothic-600mg-bold.ttf": "/static/media/pill-gothic-600mg-bold.7b493fbc4952839e825b.ttf",
     "index.html": "/index.html",
-    "main.23816cf3.css.map": "/static/css/main.23816cf3.css.map",
-    "main.649f7db8.js.map": "/static/js/main.649f7db8.js.map"
+    "main.186276a0.css.map": "/static/css/main.186276a0.css.map",
+    "main.6e76b132.js.map": "/static/js/main.6e76b132.js.map"
   },
   "entrypoints": [
-    "static/css/main.23816cf3.css",
-    "static/js/main.649f7db8.js"
+    "static/css/main.186276a0.css",
+    "static/js/main.6e76b132.js"
   ]
 }
