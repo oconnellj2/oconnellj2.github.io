@@ -52,9 +52,6 @@ const Home = () => (
 			Additionally, asking your question before getting a reply allows asynchronous communication. If the other party is
 			away, and you leave before they come back, they can still answer your question, instead of just staring at a
 			"Hello" and wondering what they missed.
-			<br />
-			Short link to this page: http://nohello.com/. (If you see that as someone's status, please be prepared to be
-			ignored if you only say "Hello!".)
 		</p>
 	</>
 );

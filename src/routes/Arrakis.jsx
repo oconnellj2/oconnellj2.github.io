@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import {NativeSelect, Text, Title} from '@mantine/core';
+import {NativeSelect, Space, Text, Title} from '@mantine/core';
 import axios from 'axios';
 
 import TelemetryChart from '../components/TelemetryChart';
@@ -26,6 +26,7 @@ const Arrakis = () => {
 					SpaceXTelemetry-Api
 				</a>
 			</Text>
+			<Space h="md" />
 			<NativeSelect
 				label="MISSION"
 				size='lg'
@@ -61,6 +62,7 @@ const Arrakis = () => {
 				]}
 				onChange={event => setMission(event.currentTarget.value)}
 			/>
+			<Space h="md" />
 			{data && <TelemetryChart telemetryData={data} />}
 		</>
 	);
