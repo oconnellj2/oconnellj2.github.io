@@ -38,7 +38,7 @@ const Home = () => (
 			Chat is neither of those things. Typing is much slower than talking. Instead of being polite, you are just making
 			the other person wait for you to phrase your question, which is lost productivity.
 			<br />
-			The same goes for "Hello -- Are you there?", "Hi Bob -- quick question.", "Do you have a sec ?", "yt?" and "ping".
+			The same goes for "Hello -- Are you there?", "Hi Bob -- quick question.", and "Do you have a sec ?".
 			Just ask the question!
 			<br />
 			If you feel it's brusque to simply say "Hi" and ask the question, you can do something like this:

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import TelemetryChart from '../components/TelemetryChart';
 
-const Arrakis = () => {
+const MTC = () => {
 	const [data, setData] = useState([]);
 	const [mission, setMission] = useState('starlink/starlink-6');
 	useEffect(() => {
@@ -18,7 +18,7 @@ const Arrakis = () => {
 	return (
 		<>
 			<Title order={2} tt="uppercase">
-				Arrakis - Spacex Mission Telemetry Client
+				Spacex Mission Telemetry Client
 			</Title>
 			<Text fs="italic">
 				See: {' '}
@@ -68,4 +68,4 @@ const Arrakis = () => {
 	);
 };
 
-export default Arrakis;
+export default MTC;

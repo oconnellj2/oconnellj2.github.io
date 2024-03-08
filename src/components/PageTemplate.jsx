@@ -10,7 +10,8 @@ import {
 	rem,
 	useMantineColorScheme,
 	useComputedColorScheme,
-	HoverCard
+	Menu,
+	Button
 } from '@mantine/core';
 import {
 	IconCode,
@@ -19,7 +20,9 @@ import {
 	IconBrandGithub,
 	IconFileText,
 	IconMoonStars,
-	IconSatellite
+	IconSatellite,
+	IconActivityHeartbeat,
+	IconMenu2
 } from '@tabler/icons-react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
@@ -67,32 +70,17 @@ const PageTemplate = ({children}) => {
 							</Typist>
 						)}
 					</Link>
-					<Group gap={2} wrap="nowrap">
-						<Link className={style.page} to="arrakis">
-							<Text style={{marginRight: 1}} href="https://github.com/oconnellj2/oconnellj2.github.io">
-								ARRAKIS
-							</Text>
-							<IconSatellite stroke={1} />
-						</Link>
-						<HoverCard>
-							<HoverCard.Target>
-								<ActionIcon
-									component="a"
-									href={require('../assets/resume.pdf')}
-									rel="noopener noreferrer nofollow"
-									target="_blank"
-									color="red"
-									variant="subtle"
-								>
-									<IconFileText stroke={1} />
-								</ActionIcon>
-							</HoverCard.Target>
-							<HoverCard.Dropdown style={{'': 0}}>
-								<Text c="dimmed" size="xs">
-									résumé
-								</Text>
-							</HoverCard.Dropdown>
-						</HoverCard>
+					<Group gap={5} wrap="nowrap">
+						<ActionIcon
+							component="a"
+							href={require('../assets/resume.pdf')}
+							rel="noopener noreferrer nofollow"
+							target="_blank"
+							color="red"
+							variant="subtle"
+						>
+							<IconFileText stroke={1} />
+						</ActionIcon>
 						<ActionIcon
 							component="a"
 							href="https://www.linkedin.com/in/oconnellj2"
@@ -120,6 +108,21 @@ const PageTemplate = ({children}) => {
 						>
 							{computedColorScheme === 'light' ? <IconMoonStars stroke={1} /> : <IconSun stroke={1} />}
 						</ActionIcon>
+						<Menu shadow="md">
+							<Menu.Target>
+								<Button rightSection={<IconMenu2 />} variant="light">
+									<Text tt="uppercase">projects</Text>
+								</Button>
+							</Menu.Target>
+							<Menu.Dropdown style={{backgroundColor: computedColorScheme === 'dark' ? '#222' : '#fff', border: 0}}>
+								<Menu.Item leftSection={<IconSatellite stroke={1} />} component={Link} to="mtc">
+									Mission Telemetry Client(MTC)
+								</Menu.Item>
+								<Menu.Item leftSection={<IconActivityHeartbeat stroke={1} />} component={Link} to="sports-api">
+									Sports API
+								</Menu.Item>
+							</Menu.Dropdown>
+						</Menu>
 					</Group>
 				</Container>
 				<Space h="xl" />
