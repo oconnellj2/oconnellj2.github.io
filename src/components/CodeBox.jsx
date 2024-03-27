@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 
 const CodeBox = ({children, ...props}) => {
 	const isDarkTheme = useComputedColorScheme() === 'dark';
-
 	const customStyle = isDarkTheme ? {backgroundColor: '#222'} : {};
-
 	return <Code style={customStyle} {...props}>{children}</Code>;
 };
 

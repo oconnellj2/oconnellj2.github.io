@@ -21,7 +21,7 @@ import CodeBox from '../components/CodeBox';
 const QRWifi = () => {
 	const [ssid, setSSID] = useState('');
 	const [pass, setPass] = useState('');
-	const [auth, setAuth] = useState('WPA3');
+	const [auth, setAuth] = useState('WPA');
 	const [passVisible, setPassVisible] = useState(false);
 	const colorScheme = useComputedColorScheme();
 
@@ -39,7 +39,7 @@ const QRWifi = () => {
 					<Space h="lg" />
 					<Select
 						label="Network Security Protocol"
-						data={['WEP', 'WPA', 'WPA2', 'WPA3']}
+						data={['WPA', 'WEP', 'nopass']}
 						searchable
 						nothingFoundMessage="Nothing found..."
 						comboboxProps={{transitionProps: {transition: 'pop', duration: 200}}}
@@ -118,8 +118,8 @@ const QRWifi = () => {
 							<CodeBox>WPA</CodeBox>
 						</Table.Td>
 						<Table.Td>
-							Authentication type; can be <CodeBox>WEP</CodeBox>, <CodeBox>WPA</CodeBox>, <CodeBox>WPA2</CodeBox>,{' '}
-							<CodeBox>WPA3</CodeBox>, or omit/<CodeBox>nopass</CodeBox> for no password.
+							Authentication type; can be <CodeBox>WPA</CodeBox>, <CodeBox>WEP</CodeBox>, or omit/
+							<CodeBox>nopass</CodeBox> for no password.
 						</Table.Td>
 					</Table.Tr>
 					<Table.Tr key="S">
@@ -184,61 +184,6 @@ const QRWifi = () => {
 						<Table.Td>
 							(WPA2-EAP only) Phase 2 method, like <CodeBox>MSCHAPV2</CodeBox>
 						</Table.Td>
-					</Table.Tr>
-				</Table.Tbody>
-			</Table>
-			<Space h="xl" />
-			<Title order={2} tt="uppercase">
-				Wi-Fi security protocols
-			</Title>
-			<Text>
-				WEP, WPA, WPA2, and WPA3 are Wi-Fi security protocols that prevent unauthorized access and eavesdropping on
-				wireless networks. They protect your data sent over a Wi-Fi network by encrypting it so that intruders
-				can&apos;t read it.
-			</Text>
-			<Space h="md" />
-			<Text>
-				Wireless security protocols all have the same goal — to protect wireless networks from unauthorized access.
-				While WEP does that by providing basic encryption for wireless networks, WPA, WPA2, and WPA3 aim to improve the
-				security of wireless connections by introducing stronger encryption and authentication methods as displayed in
-				the table below:
-			</Text>
-			<Table stickyHeader>
-				<Table.Thead>
-					<Table.Tr>
-						<Table.Th>Wi-Fi security protocol</Table.Th>
-						<Table.Th>Key management approach</Table.Th>
-						<Table.Th>Encryption size</Table.Th>
-						<Table.Th>Encryption used</Table.Th>
-					</Table.Tr>
-				</Table.Thead>
-				<Table.Tbody>
-					<Table.Tr key="WEP">
-						<Table.Td>WEP</Table.Td>
-						<Table.Td>Static keys</Table.Td>
-						<Table.Td>64-bit, or 128-bit</Table.Td>
-						<Table.Td>RC4 (Rivest Cipher 4)</Table.Td>
-					</Table.Tr>
-					<Table.Tr key="WPA">
-						<Table.Td>WPA</Table.Td>
-						<Table.Td>Dynamic keys</Table.Td>
-						<Table.Td>128-bit</Table.Td>
-						<Table.Td>RC4 (Rivest Cipher 4)</Table.Td>
-					</Table.Tr>
-					<Table.Tr key="WPA2">
-						<Table.Td>WPA2</Table.Td>
-						<Table.Td>Dynamic keys</Table.Td>
-						<Table.Td>128-bit or 265-bit</Table.Td>
-						<Table.Td>
-							AES (Advanced Encryption Standard) using CCMP (Counter Mode with Cipher Block Chaining Message
-							Authentication Code Protocol)
-						</Table.Td>
-					</Table.Tr>
-					<Table.Tr key="WPA3">
-						<Table.Td>WPA3</Table.Td>
-						<Table.Td>Dynamic keys (unique keys, individualized data encryption)</Table.Td>
-						<Table.Td>192-bit and 256-bit</Table.Td>
-						<Table.Td>GCM (Galois-Counter Mode) using SAE (Simultaneous Authentication of Equals)</Table.Td>
 					</Table.Tr>
 				</Table.Tbody>
 			</Table>

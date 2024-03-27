@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter as Router, Route, Routes} from 'react-router-dom';
 
 import PageTemplate from './components/PageTemplate';
 import Home from './routes/Home';
@@ -9,7 +9,7 @@ import QRWifi from './routes/QRWifi';
 import SportsAPI from './routes/SportsAPI';
 
 const App = () => (
-	<BrowserRouter>
+	<Router>
 		<PageTemplate>
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ const App = () => (
 				<Route path="/sports-api" element={<SportsAPI />} />
 			</Routes>
 		</PageTemplate>
-	</BrowserRouter>
+	</Router>
 );
 
 export default App;

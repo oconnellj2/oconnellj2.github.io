@@ -2,12 +2,10 @@
 	font-family: 'pill-gothic';
 	src: url('../assets/fonts/pill-gothic-600mg-regular.ttf') format('truetype');
 }
-
 @font-face {
 	font-family: 'pill-gothic-header';
 	src: url('../assets/fonts/pill-gothic-600mg-bold.ttf') format('truetype');
 }
-
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -24,6 +22,13 @@
 	display: flex;
 	align-items: center;
 }
+.innerFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: var(--mantine-spacing-xl);
+	padding-bottom: var(--mantine-spacing-xl);
+}
 main {
 	flex: 1;
 }
@@ -36,13 +41,6 @@ body {
 	flex-direction: column;
 	min-height: 100vh; /* Ensures the body takes up at least the height of the viewport */
 	margin: 0;
-}
-.innerFooter {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: var(--mantine-spacing-xl);
-	padding-bottom: var(--mantine-spacing-xl);
 }
 a {
 	color: #2997ff;
