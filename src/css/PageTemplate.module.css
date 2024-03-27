@@ -24,9 +24,18 @@
 	display: flex;
 	align-items: center;
 }
-.footer {
-	margin-top: rem(120px);
+main {
+	flex: 1;
+}
+footer {
+	margin-top: auto;
 	border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* Ensures the body takes up at least the height of the viewport */
+	margin: 0;
 }
 .innerFooter {
 	display: flex;

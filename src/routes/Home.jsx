@@ -1,14 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-import {Code, Title} from '@mantine/core';
+import {Title} from '@mantine/core';
+
+import CodeBox from '../components/CodeBox';
 
 const Home = () => (
 	<>
 		<Title order={2} tt="uppercase">
 			Do Not Just Say Hello
 		</Title>
-		<Code block>
+		<CodeBox block>
 			2023-07-19 12:32:12 you: Hi
 			<br />
 			2023-07-19 12:32:15 co-worker: Hello.
@@ -19,17 +21,17 @@ const Home = () => (
 			<br />
 			2023-07-19 12:35:21 co-worker: Oh, that's [answer...]
 			<br />
-		</Code>
+		</CodeBox>
 		<p>
 			It's as if you called someone on the phone and said "Hi!" and then put them on hold!
 			<br />
 			Please do this instead:
 		</p>
-		<Code block>
+		<CodeBox block>
 			2023-07-19 12:32:12 you: Hi -- Can you help with [something]
 			<br />
 			2023-07-19 12:33:32 co-worker: [answers question]
-		</Code>
+		</CodeBox>
 		<p>
 			Note that you get help minutes sooner, and you don't make them wait. Instead, the co-worker can start thinking
 			about your question right away!
@@ -43,11 +45,11 @@ const Home = () => (
 			<br />
 			If you feel it's brusque to simply say "Hi" and ask the question, you can do something like this:
 		</p>
-		<Code block>
+		<CodeBox block>
 			2023-07-19 12:32:12 you: If you're not busy could ask a question.
 			<br />
 			I'm working on [something] and I'm trying to do [etc...]
-		</Code>
+		</CodeBox>
 		<p>
 			Additionally, asking your question before getting a reply allows asynchronous communication. If the other party is
 			away, and you leave before they come back, they can still answer your question, instead of just staring at a

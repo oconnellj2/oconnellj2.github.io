@@ -21,8 +21,8 @@ import {
 	IconFileText,
 	IconMoonStars,
 	IconSatellite,
-	IconActivityHeartbeat,
-	IconMenu2
+	IconMenu2,
+	IconQrcode
 } from '@tabler/icons-react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
@@ -54,7 +54,7 @@ const PageTemplate = ({children}) => {
 	}, [count]);
 
 	const {setColorScheme} = useMantineColorScheme();
-	const computedColorScheme = useComputedColorScheme('dark', {getInitialValueInEffect: true});
+	const colorScheme = useComputedColorScheme('dark', {getInitialValueInEffect: true});
 
 	return (
 		<>
@@ -95,40 +95,53 @@ const PageTemplate = ({children}) => {
 							href="https://github.com/oconnellj2"
 							rel="noopener noreferrer nofollow"
 							target="_blank"
-							color="grey"
+							color="gray"
 							variant="subtle"
 						>
 							<IconBrandGithub stroke={1} />
 						</ActionIcon>
 						<ActionIcon
-							onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
+							onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')}
 							variant="subtle"
-							color={computedColorScheme === 'light' ? 'dark' : 'orange'}
+							color={colorScheme === 'light' ? 'dark' : 'orange'}
 							aria-label="toggle-color"
 						>
-							{computedColorScheme === 'light' ? <IconMoonStars stroke={1} /> : <IconSun stroke={1} />}
+							{colorScheme === 'light' ? <IconMoonStars stroke={1} /> : <IconSun stroke={1} />}
 						</ActionIcon>
-						<Menu shadow="md">
+						<Menu
+							shadow="md"
+							classNames={{item: 'dark-item'}}
+							styles={{dropdown: {backgroundColor: colorScheme === 'dark' ? '#222' : '#fff', border: 0}}}
+						>
 							<Menu.Target>
 								<Button rightSection={<IconMenu2 />} variant="light">
 									<Text tt="uppercase">projects</Text>
 								</Button>
 							</Menu.Target>
-							<Menu.Dropdown style={{backgroundColor: computedColorScheme === 'dark' ? '#222' : '#fff', border: 0}}>
-								<Menu.Item leftSection={<IconSatellite stroke={1} />} component={Link} to="mtc">
+							<Menu.Dropdown>
+								<Menu.Item
+									leftSection={<IconSatellite stroke={1} />}
+									component={Link}
+									to="mtc"
+								>
 									Mission Telemetry Client(MTC)
 								</Menu.Item>
-								<Menu.Item leftSection={<IconActivityHeartbeat stroke={1} />} component={Link} to="sports-api">
-									Sports API
+								<Menu.Item leftSection={<IconQrcode stroke={1} />} component={Link} to="qr-fi">
+									QR-FI
 								</Menu.Item>
+								{/* <Menu.Item leftSection={<IconActivityHeartbeat stroke={1} />} component={Link} to="sports-api">
+									Sports API
+								</Menu.Item> */}
 							</Menu.Dropdown>
 						</Menu>
 					</Group>
 				</Container>
 				<Space h="xl" />
 			</header>
-			<Container>{children}</Container>
-			<div className={style.footer}>
+			<main>
+				<Container className={style.main}>{children}</Container>
+			</main>
+			<footer>
 				<Space h="xl" />
 				<Container my="md" className={style.innerFooter}>
 					<Text c="dimmed" size="sm">
@@ -148,7 +161,7 @@ const PageTemplate = ({children}) => {
 						</ActionIcon>
 					</Group>
 				</Container>
-			</div>
+			</footer>
 		</>
 	);
 };
