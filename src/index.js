@@ -6,6 +6,7 @@ import {MantineProvider, createTheme} from '@mantine/core';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
+import style from './css/PageTemplate.module.css';
 
 const theme = createTheme({
 	fontFamily: 'pill-gothic, sans-serif',
@@ -14,9 +15,9 @@ const theme = createTheme({
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-	<body>
+	<div className={style.customBody}>
 		<MantineProvider theme={theme}>
 			<App />
 		</MantineProvider>
-	</body>
+	</div>
 );

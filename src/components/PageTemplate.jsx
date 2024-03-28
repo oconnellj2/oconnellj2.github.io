@@ -34,7 +34,6 @@ const PageTemplate = ({children}) => {
 	const languages = [
 		'Welcome',
 		'Bienvenu',
-		'स्वागतम्',
 		'환영합니다',
 		'ようこそ',
 		'Ласкаво просимо',

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 import {CodeHighlight} from '@mantine/code-highlight';
 import {
@@ -22,25 +22,8 @@ const QRWifi = () => {
 	const [ssid, setSSID] = useState('');
 	const [pass, setPass] = useState('');
 	const [auth, setAuth] = useState('WPA');
-	const [ip, setIp] = useState('');
 	const [passVisible, setPassVisible] = useState(false);
 	const isDark = useComputedColorScheme() === 'dark';
-
-	const fetchIpAddress = async () => {
-		await (
-			await fetch('https://api.ipify.org?format=json')
-		)
-			.json()
-			.then(res => {
-				console.log(res);
-				setIp(res.ip);
-			})
-			.catch(e => console.error('Error fetching IP address', e));
-	};
-
-	useEffect(() => {
-		fetchIpAddress();
-	}, []);
 
 	return (
 		<>
@@ -84,7 +67,6 @@ const QRWifi = () => {
 							</ActionIcon>
 						}
 					/>
-					{ip && <Text>YOUR IP: {ip}</Text>}
 					<Space h="xl" />
 				</Grid.Col>
 				<Grid.Col span={{base: 12, xs: 6}}>
@@ -134,7 +116,7 @@ const QRWifi = () => {
 							<CodeBox>WPA</CodeBox>
 						</Table.Td>
 						<Table.Td>
-							Authentication type; can be <CodeBox>WPA</CodeBox>, <CodeBox>WEP</CodeBox>, or omit/
+							Authentication type; can be <CodeBox>WPA</CodeBox>(for WPA/WPA2/WPA3), <CodeBox>WEP</CodeBox>, or omit/
 							<CodeBox>nopass</CodeBox> for no password.
 						</Table.Td>
 					</Table.Tr>
