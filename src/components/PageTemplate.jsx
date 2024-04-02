@@ -144,7 +144,7 @@ const PageTemplate = ({children}) => {
 				<Space h="xl" />
 				<Container my="md" className={style.innerFooter}>
 					<Text c="dimmed" size="sm">
-						© {new Date().getFullYear()} <a href="mailto:jdoconnell@pm.me">James O&apos;Connell</a>. All rights
+						© {new Date().getFullYear()} <a href="mailto:jdo.info@pm.me">James O&apos;Connell</a>. All rights
 						reserved.
 					</Text>
 					<Group gap={0} justify="flex-end" wrap="nowrap">

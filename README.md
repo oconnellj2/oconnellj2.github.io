@@ -38,4 +38,4 @@ http://localhost:3000
 
 ## Contributing
 
-[James O'Connell](https://github.com/oconnellj2) - [jdoconnell@pm.me](mailto:jdoconnell@pm.me)
+[James O'Connell](https://github.com/oconnellj2) -> [email me](mailto:jdo.info@pm.me)
