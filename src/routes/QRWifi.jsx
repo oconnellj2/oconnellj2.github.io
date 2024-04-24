@@ -71,7 +71,7 @@ const QRWifi = () => {
 				</Grid.Col>
 				<Grid.Col span={{base: 12, xs: 6}}>
 					<Center>
-						{ssid && pass && auth && (
+						{ssid && pass && (
 							<QRCode
 								size={250}
 								bgColor={isDark ? '#000' : '#fff'}
