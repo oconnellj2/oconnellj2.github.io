@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.a2420f3f.css",
-    "main.js": "/static/js/main.6ec8a46e.js",
+    "main.js": "/static/js/main.16e5eba7.js",
     "static/media/resume.pdf": "/static/media/resume.a7c721909c9537f2ef2d.pdf",
     "static/media/pill-gothic-600mg-regular.ttf": "/static/media/pill-gothic-600mg-regular.726af025a1d878200f57.ttf",
     "static/media/pill-gothic-600mg-bold.ttf": "/static/media/pill-gothic-600mg-bold.7b493fbc4952839e825b.ttf",
     "index.html": "/index.html",
     "main.a2420f3f.css.map": "/static/css/main.a2420f3f.css.map",
-    "main.6ec8a46e.js.map": "/static/js/main.6ec8a46e.js.map"
+    "main.16e5eba7.js.map": "/static/js/main.16e5eba7.js.map"
   },
   "entrypoints": [
     "static/css/main.a2420f3f.css",
-    "static/js/main.6ec8a46e.js"
+    "static/js/main.16e5eba7.js"
   ]
 }
