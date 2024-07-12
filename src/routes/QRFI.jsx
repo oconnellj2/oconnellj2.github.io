@@ -18,11 +18,11 @@ import {QRCode} from 'react-qrcode-logo';
 
 import CodeBox from '../components/CodeBox';
 
-const QRWifi = () => {
+const QRFI = () => {
 	const [ssid, setSSID] = useState('');
 	const [pass, setPass] = useState('');
 	const [auth, setAuth] = useState('WPA');
-	const [passVisible, setPassVisible] = useState(false);
+	const [hide, setHide] = useState(false);
 	const isDark = useComputedColorScheme() === 'dark';
 
 	return (
@@ -49,6 +49,7 @@ const QRWifi = () => {
 					/>
 					<Space h="md" />
 					<TextInput
+						type='ssid'
 						label="Network Name (SSID)"
 						value={ssid}
 						onChange={e => setSSID(e.target.value)}
@@ -56,14 +57,14 @@ const QRWifi = () => {
 					/>
 					<Space h="md" />
 					<TextInput
-						type={passVisible ? 'text' : 'password'}
+						type={hide ? 'text' : 'password'}
 						label="Network Password"
 						value={pass}
 						onChange={e => setPass(e.target.value)}
 						leftSection={<IconLock stroke={1} />}
 						rightSection={
-							<ActionIcon color="gray" variant="subtle" onClick={() => setPassVisible(!passVisible)}>
-								{passVisible ? <IconEyeOff stroke={1} /> : <IconEye stroke={1} />}
+							<ActionIcon color="gray" variant="subtle" onClick={() => setHide(!hide)}>
+								{hide ? <IconEyeOff stroke={1} /> : <IconEye stroke={1} />}
 							</ActionIcon>
 						}
 					/>
@@ -84,9 +85,6 @@ const QRWifi = () => {
 					</Center>
 				</Grid.Col>
 			</Grid>
-			<Title order={2} tt="uppercase">
-				Wi-Fi Network config (Android, iOS 11+)
-			</Title>
 			<Text>
 				Dont trust your browser or this website? Just pipe the following string through your favorite QR code generator
 				choice:
@@ -146,4 +144,4 @@ const QRWifi = () => {
 	);
 };
 
-export default QRWifi;
+export default QRFI;

@@ -1,21 +1,23 @@
 import React from 'react';
 
-import {HashRouter as Router, Route, Routes} from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import PageTemplate from './components/PageTemplate';
 import Home from './routes/Home';
-import MTC from './routes/MTC';
-import QRWifi from './routes/QRWifi';
-import SportsAPI from './routes/SportsAPI';
+import PassGen from './routes/PassGen';
+import QRFI from './routes/QRFI';
+import SGOMS from './routes/SGOMS';
+import ZipCodes from './routes/ZipCodes';
 
 const App = () => (
 	<Router>
 		<PageTemplate>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/mtc" element={<MTC />} />
-				<Route path="/qr-fi" element={<QRWifi />} />
-				<Route path="/sports-api" element={<SportsAPI />} />
+				<Route path="/pass-gen" element={<PassGen />} />
+				<Route path="/qr-fi" element={<QRFI />} />
+				<Route path="/sgoms" element={<SGOMS />} />
+				<Route path="/zip" element={<ZipCodes />} />
 			</Routes>
 		</PageTemplate>
 	</Router>
