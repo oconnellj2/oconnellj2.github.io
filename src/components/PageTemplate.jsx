@@ -19,10 +19,10 @@ import {
 	IconBrandGithub,
 	IconFileText,
 	IconMoonStars,
-	IconSatellite,
 	IconQrcode,
 	IconChevronDown,
-	IconKey
+	IconKey,
+	IconMap
 } from '@tabler/icons-react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -102,14 +102,17 @@ const PageTemplate = ({ children }) => {
 								</Button>
 							</Menu.Target>
 							<Menu.Dropdown>
-								<Menu.Item leftSection={<IconSatellite stroke={1} />} component={Link} to="sgoms">
+								{/* <Menu.Item leftSection={<IconSatellite stroke={1} />} component={Link} to="sgoms">
 									SGOMS
-								</Menu.Item>
+								</Menu.Item> */}
 								<Menu.Item leftSection={<IconQrcode stroke={1} />} component={Link} to="qr-fi">
 									QR-FI
 								</Menu.Item>
 								<Menu.Item leftSection={<IconKey stroke={1} />} component={Link} to="pass-gen">
-									PASS-GEN
+									PASS GEN
+								</Menu.Item>
+								<Menu.Item leftSection={<IconMap stroke={1} />} component={Link} to="zip-viz">
+									ZIP VIZ
 								</Menu.Item>
 							</Menu.Dropdown>
 						</Menu>

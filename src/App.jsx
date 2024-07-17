@@ -17,7 +17,7 @@ const App = () => (
 				<Route path="/pass-gen" element={<PassGen />} />
 				<Route path="/qr-fi" element={<QRFI />} />
 				<Route path="/sgoms" element={<SGOMS />} />
-				<Route path="/zip" element={<ZipCodes />} />
+				<Route path="/zip-viz" element={<ZipCodes />} />
 			</Routes>
 		</PageTemplate>
 	</Router>
