@@ -1,4 +1,4 @@
-# Howdy! [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/license/mit/) [![node][node]][node-url]
+# Howdy! [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/license/mit/)
 
 > a website about nothing...
 
