@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
 	ActionIcon,
@@ -25,12 +25,13 @@ import {
 	IconMap
 } from '@tabler/icons-react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Typist from 'react-typist-component';
+import 'katex/dist/katex.min.css';
 
 import style from '../css/PageTemplate.module.css';
 
-const PageTemplate = ({ children }) => {
+const PageTemplate = ({children}) => {
 	const languages = [
 		'Welcome',
 		'Bienvenu',
@@ -45,7 +46,7 @@ const PageTemplate = ({ children }) => {
 	const [index, setIndex] = useState(0);
 	const [greeting, setGreeting] = useState(languages[0]);
 	const [menu, setMenu] = useState(false);
-	const { colorScheme, setColorScheme } = useMantineColorScheme();
+	const {colorScheme, setColorScheme} = useMantineColorScheme();
 	const isDark = colorScheme === 'dark';
 
 	useEffect(() => {
@@ -72,7 +73,7 @@ const PageTemplate = ({ children }) => {
 					<Link className={style.page} to="/">
 						<Title tt="uppercase">_ </Title>
 						{count && (
-							<Typist style={{ width: '300px' }} avgTypingDelay={50} onTypingDone={() => setCount(0)}>
+							<Typist style={{width: '300px'}} avgTypingDelay={50} onTypingDone={() => setCount(0)}>
 								<Title tt="uppercase">{greeting}</Title>
 								<Typist.Delay ms={5000} />
 								<Typist.Backspace count={greeting.length} />
@@ -82,7 +83,7 @@ const PageTemplate = ({ children }) => {
 					<Group gap={5} wrap="nowrap">
 						<Menu
 							shadow="md"
-							styles={{ dropdown: { backgroundColor: isDark ? '#222' : '#fff', border: 0 } }}
+							styles={{dropdown: {backgroundColor: isDark ? '#222' : '#fff', border: 0}}}
 							onClose={() => setMenu(false)}
 						>
 							<Menu.Target>
@@ -91,7 +92,7 @@ const PageTemplate = ({ children }) => {
 									rightSection={
 										<IconChevronDown
 											stroke={1}
-											style={{ transform: `rotate(${menu ? '180deg' : '0deg'})`, transition: 'transform 0.3s ease' }}
+											style={{transform: `rotate(${menu ? '180deg' : '0deg'})`, transition: 'transform 0.3s ease'}}
 										/>
 									}
 									onClick={() => setMenu(true)}
@@ -105,13 +106,13 @@ const PageTemplate = ({ children }) => {
 								{/* <Menu.Item leftSection={<IconSatellite stroke={1} />} component={Link} to="sgoms">
 									SGOMS
 								</Menu.Item> */}
-								<Menu.Item leftSection={<IconQrcode stroke={1} />} component={Link} to="qr-fi">
+								<Menu.Item className={style.menuItem} leftSection={<IconQrcode stroke={1} />} component={Link} to="qr-fi">
 									QR-FI
 								</Menu.Item>
-								<Menu.Item leftSection={<IconKey stroke={1} />} component={Link} to="pass-gen">
+								<Menu.Item className={style.menuItem} leftSection={<IconKey stroke={1} />} component={Link} to="pass-gen">
 									PASS GEN
 								</Menu.Item>
-								<Menu.Item leftSection={<IconMap stroke={1} />} component={Link} to="zip-viz">
+								<Menu.Item className={style.menuItem} leftSection={<IconMap stroke={1} />} component={Link} to="zip-viz">
 									ZIP VIZ
 								</Menu.Item>
 							</Menu.Dropdown>
@@ -164,8 +165,11 @@ const PageTemplate = ({ children }) => {
 				<Space h="xl" />
 				<Container my="md" className={style.innerFooter}>
 					<Text c="dimmed" size="sm">
-						© {new Date().getFullYear()} <a id="mlink" href="#">James O&apos;Connell</a>. All rights
-						reserved.
+						© {new Date().getFullYear()}{' '}
+						<a id="mlink" href="#">
+							James O&apos;Connell
+						</a>
+						. All rights reserved.
 					</Text>
 					<Group gap={0} justify="flex-end" wrap="nowrap">
 						<ActionIcon
@@ -176,7 +180,7 @@ const PageTemplate = ({ children }) => {
 							color="gray"
 							variant="subtle"
 						>
-							<IconCode style={{ width: rem(18), height: rem(18) }} stroke={1} />
+							<IconCode style={{width: rem(18), height: rem(18)}} stroke={1} />
 						</ActionIcon>
 					</Group>
 				</Container>

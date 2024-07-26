@@ -36,6 +36,12 @@
 	margin: 0;
 }
 
+.menuItem {
+	&:hover {
+		background-color: #2997ff;
+	}
+}
+
 main {
 	flex: 1;
 }
