@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.17c42382.css",
-    "main.js": "/static/js/main.d87080b7.js",
-    "static/media/resume.pdf": "/static/media/resume.ebbb691a8549c131b18d.pdf",
+    "main.css": "/static/css/main.b4aea161.css",
+    "main.js": "/static/js/main.c231dcd4.js",
+    "static/media/resume.pdf": "/static/media/resume.e0e4c08be7515f492012.pdf",
     "static/media/pill-gothic-600mg-regular.ttf": "/static/media/pill-gothic-600mg-regular.726af025a1d878200f57.ttf",
     "static/media/pill-gothic-600mg-bold.ttf": "/static/media/pill-gothic-600mg-bold.7b493fbc4952839e825b.ttf",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -66,11 +66,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.17c42382.css.map": "/static/css/main.17c42382.css.map",
-    "main.d87080b7.js.map": "/static/js/main.d87080b7.js.map"
+    "main.b4aea161.css.map": "/static/css/main.b4aea161.css.map",
+    "main.c231dcd4.js.map": "/static/js/main.c231dcd4.js.map"
   },
   "entrypoints": [
-    "static/css/main.17c42382.css",
-    "static/js/main.d87080b7.js"
+    "static/css/main.b4aea161.css",
+    "static/js/main.c231dcd4.js"
   ]
 }
