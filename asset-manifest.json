@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.b4aea161.css",
-    "main.js": "/static/js/main.c231dcd4.js",
-    "static/media/resume.pdf": "/static/media/resume.e0e4c08be7515f492012.pdf",
+    "main.js": "/static/js/main.90f2b55d.js",
+    "static/media/resume.pdf": "/static/media/resume.ff82e1bba5a9120b1add.pdf",
     "static/media/pill-gothic-600mg-regular.ttf": "/static/media/pill-gothic-600mg-regular.726af025a1d878200f57.ttf",
     "static/media/pill-gothic-600mg-bold.ttf": "/static/media/pill-gothic-600mg-bold.7b493fbc4952839e825b.ttf",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -67,10 +67,10 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
     "main.b4aea161.css.map": "/static/css/main.b4aea161.css.map",
-    "main.c231dcd4.js.map": "/static/js/main.c231dcd4.js.map"
+    "main.90f2b55d.js.map": "/static/js/main.90f2b55d.js.map"
   },
   "entrypoints": [
     "static/css/main.b4aea161.css",
-    "static/js/main.c231dcd4.js"
+    "static/js/main.90f2b55d.js"
   ]
 }
