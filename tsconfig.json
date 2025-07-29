@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                     // Allows using modern JS features
+    "useDefineForClassFields": true,        // Better alignment with native JS behavior
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include types for browser + latest JS
+    "module": "ESNext",                     // Use ES module system (used by Vite)
+    "moduleResolution": "Bundler",          // Let Vite handle module resolution
+    "strict": true,                         // Turn on all strict type checking (recommended!)
+    "jsx": "react-jsx",                     // Use the new JSX transform (React 17+)
+    "esModuleInterop": true,                // Allow default imports from CommonJS
+    "skipLibCheck": true,                   // Skip checking `.d.ts` files for faster builds
+    "forceConsistentCasingInFileNames": true, // Enforce file naming case consistency
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"] // Only compile files in your /src directory
+}
